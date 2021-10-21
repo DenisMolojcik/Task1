@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="Tablestyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="TableScript.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="" class="header__logo">
+                    <img src="m_logo.png" alt="">
+                </a>
+                <p class="header__name">FC BARCELONA STORE</p>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="index.html" class="header__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="Table.html" class="header__link">Table</a>
+                        </li>
+                        <li>
+                            <a href="About.html" class="header__link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Table -->
+    <div class="table">
+        <table class="table__background" id="table__background">
+            <tr>
+                <th> Name</th>
+                <th> Transfer to</th>
+                <th> Value</th>
+                <th> Birtday</th>
+                <th> Season</th>
+            </tr>
+            <tr>
+                <th> Lorem ipsum</th>
+                <th> Club name</th>
+                <th> Price</th>
+                <th> Age</th>
+                <th> 21/22</th>
+            </tr>
+            <tr>
+                <th> Lorem ipsum</th>
+                <th> Club name</th>
+                <th> Price</th>
+                <th> Age</th>
+                <th> 21/22</th>
+            </tr>
+            <tr>
+                <th> Lorem ipsum</th>
+                <th> Club name</th>
+                <th> Price</th>
+                <th> Age</th>
+                <th> 21/22</th>
+            </tr>
+            <tr>
+                <th> Lorem ipsum</th>
+                <th> Club name</th>
+                <th> Price</th>
+                <th> Age</th>
+                <th> 21/22</th>
+            </tr>
+            <tr>
+                <th> Lorem ipsum</th>
+                <th> Club name</th>
+                <th> Price</th>
+                <th> Age</th>
+                <th> 21/22</th>
+            </tr>
+        </table>
+    </div>
+    <!-- Form for table -->
+    <div class="Form__for__table">
+        <p class="name__form">Choose Table color</p>
+        <form id="form">
+            <p>
+                <input type="radio" name="color" id="color1" value="green">
+                <label for="green">Green</label>
+            </p>
+
+            <p>
+                <input type="radio" name="color" id="color2" value="red" checked>
+                <label for="red">Red</label>
+            </p>
+                        
+            <p>
+                <input type="radio" name="color" id="color3" value="yellow">
+                <label for="red">Yellow</label>
+            </p>
+            <p><input type="button" class="btn" id="btn" value="Submit" onClick="onClick()"></p>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>    
+        <div class="footer">
+            <div class="date"> 16.10.2021 </div>
+            <div class="name__author"> Made by Molojcik Denis </div>
+            <div class="version__site"> Version 1.0</div>
+        </div>   
+    </footer>
+    <!-- Script for form and table -->
+    <script>
+        const button = document.getElementById('btn');
+        let radio_color = document.getElementById('form').value;
+        let radio__background = document.getElementById('table__background');
+        function onClick(){
+            if (document.getElementById('color1').checked) {
+                radio__background.style.backgroundColor = 'green';
+            }    
+            else if(document.getElementById('color2').checked)
+            {
+                radio__background.style.backgroundColor = 'red';
+            }
+            else if(document.getElementById('color3').checked)
+            {
+                radio__background.style.backgroundColor = 'yellow';
+            }
+        }  
+    </script>
+</body>
+</html>
