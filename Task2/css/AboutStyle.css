@@ -1,0 +1,43 @@
+/* ---- About Author ---- */
+.about__author{
+    margin-top: 130px;
+    padding-bottom: 100px;
+    background-color: wheat;
+}
+.about__author p{
+    text-align: center;
+    font-size: 30px;
+}
+.author{
+    padding-top: 50px;
+}
+.name__of__author{
+    margin-right: 300px;
+}
+.information{
+    margin-right: 300px;
+    font-size: 20px;
+    padding-left: 700px;
+    padding-right:200px;
+}
+.feedback{
+    margin-top: 100px;
+}
+input{
+    width: 10%;
+    border:1px solid;
+    border-radius: 4px;
+    position:relative;
+    resize: vertical;
+    padding: 1%;
+}   
+.button{
+    position:relative; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    user-select: none;
+    background:rgb(32, 247, 60);
+    padding: 1% 3%;
+    outline: none; 
+    border-radius: 20px;
+}
