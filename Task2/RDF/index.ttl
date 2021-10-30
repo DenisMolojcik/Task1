@@ -1,0 +1,34 @@
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://rdfa.info/play/>
+   <https://ogp.me/ns#type> "website"@en;
+   <https://ogp.me/ns#title> "fcbarcelonastore"@en;
+   <https://ogp.me/ns#url> "index.html"@en;
+   <https://ogp.me/ns#image> "https://og-image.xyz/og/title/subtitle/og-image.xyz/https/menlo/candybar/black/data.png"@en;
+   rdfa:usesVocabulary <https://schema.org/>;
+   rdfa:usesVocabulary dc:;
+   <https://schema.org/title> <https://rdfa.info/play/#header>;
+   <https://schema.org/title> <https://rdfa.info/play/#info>;
+   <https://schema.org/title> <https://rdfa.info/play/#footer>;
+   dc:title <https://rdfa.info/play/#container__pricing> .
+<https://rdfa.info/play/#header>
+   rdf:type <https://schema.org/head>;
+   <https://schema.org/logo> <https://rdfa.info/play/#>;
+   foaf:depiction <https://rdfa.info/play/images/m_logo.png>;
+   <https://schema.org/name> "FC BARCELONA STORE"@en;
+   <https://schema.org/url> <https://rdfa.info/play/index.html>;
+   <https://schema.org/url> <https://rdfa.info/play/Table.html>;
+   <https://schema.org/url> <https://rdfa.info/play/About.html> .
+<https://rdfa.info/play/#info>
+   rdf:type <https://schema.org/info>;
+   rdf:type <https://schema.org/about>;
+   <https://schema.org/head> "Lorem ipsum"@en;
+   <https://schema.org/info> "Lorem ipsum dolor sit amet consectetur adipisicing elit."@en .
+<https://rdfa.info/play/#footer>
+   rdf:type <https://schema.org/end-site>;
+   <https://schema.org/date> "Today's date:"@en;
+   <https://schema.org/creator> " Molojcik Denis"@en;
+   <https://schema.org/license> " Version 1.1"@en .
