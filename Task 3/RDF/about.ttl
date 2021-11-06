@@ -1,0 +1,34 @@
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://rdfa.info/play/>
+   <https://ogp.me/ns#type> "profile"@en;
+   <https://ogp.me/ns#title> "aboutauthor"@en;
+   <https://ogp.me/ns#url> "About.html"@en;
+   <https://ogp.me/ns#image> "https://og-image.xyz/og/title/subtitle/og-image.xyz/https/menlo/candybar/black/data.png"@en;
+   rdfa:usesVocabulary <https://schema.org/>;
+   <https://schema.org/title> <https://rdfa.info/play/#header>;
+   <https://schema.org/title> <https://rdfa.info/play/#about-author>;
+   <https://schema.org/title> <https://rdfa.info/play/#footer> .
+<https://rdfa.info/play/#header>
+   rdf:type <https://schema.org/head>;
+   <https://schema.org/logo> <https://rdfa.info/play/#>;
+   foaf:depiction <https://rdfa.info/play/images/m_logo.png>;
+   <https://schema.org/name> "FC BARCELONA STORE"@en;
+   <https://schema.org/url> <https://rdfa.info/play/index.html>;
+   <https://schema.org/url> <https://rdfa.info/play/Table.html>;
+   <https://schema.org/url> <https://rdfa.info/play/About.html> .
+<https://rdfa.info/play/#about-author>
+   rdf:type <https://schema.org/info>;
+   <https://schema.org/name-author> """
+                  Molojcik Denis
+              """@en;
+   <https://schema.org/info-about-author> """
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis provident ex delectus fugiat harum animi ea odio non ducimus quia distinctio consectetur, debitis reiciendis molestiae unde eligendi iste facilis!
+              """@en .
+<https://rdfa.info/play/#footer>
+   rdf:type <https://schema.org/end-site>;
+   <https://schema.org/date> "Today's date:"@en;
+   <https://schema.org/creator> " Molojcik Denis"@en;
+   <https://schema.org/license> " Version 1.1"@en .
