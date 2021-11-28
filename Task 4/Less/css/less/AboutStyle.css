@@ -1,0 +1,36 @@
+.for_button {
+  font-family: sans-serif;
+  border-radius: 20px;
+}
+.about__author {
+  background-color: #f0d71c;
+  padding: 50px;
+  text-align: center;
+}
+.author {
+  font-size: 40px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.name__of__author {
+  font-size: 35px;
+  padding: 0 10px;
+}
+.feedback {
+  font-size: 30px;
+  padding: 0 100px;
+}
+.information {
+  font-size: 30px;
+  padding: 0 400px;
+}
+input {
+  width: 15%;
+}
+.button {
+  font-family: sans-serif;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 0 40px;
+  background: #cfec0e;
+}

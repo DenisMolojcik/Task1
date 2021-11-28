@@ -1,0 +1,41 @@
+@size: 50px;
+@color:rgb(240, 215, 28);
+
+// parameterized mixin without parameters
+.for_button{
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+// mixins with required elements
+.for_info_for_author(@size_for_text;@size_for_padding){
+    font-size: @size_for_text;
+    padding:0 @size_for_padding;
+}
+.about__author{
+    background-color:@color;
+    padding: @size;
+    text-align: center;
+}
+.author{
+    .for_info_for_author(40px,10px); 
+    text-transform: uppercase;   
+}
+
+.name__of__author{
+    .for_info_for_author(35px, 10px);
+}
+.feedback{
+    .for_info_for_author(30px, 100px)
+}
+.information{
+    .for_info_for_author(30px, 400px);
+}
+input{
+    width: 15%;
+}
+.button{
+    .for_button;
+    .for_info_for_author(20px, 40px);
+    background: #cfec0e;
+}

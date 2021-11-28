@@ -1,0 +1,27 @@
+$align: center
+$size: 50px
+@function size($n)
+    @return $n - 5px    
+@for $i from 1 through 3
+  .author_#{$i} 
+    font-size: size(30px) - $i
+
+.about__author
+    text-align: $align
+    background-color: #FF00FF
+    padding: $size
+input
+    width: $size *3
+    border:2px solid
+    border-radius: 6px
+    position:relative
+    resize: vertical
+
+.button
+    position:relative 
+    user-select: none
+    background:rgb(126, 126, 134)
+    padding: $size / 4
+    border-radius: 15px
+    text-transform: uppercase
+    font-size: $size / 4

@@ -1,0 +1,36 @@
+$size:50px
+@for $i from 1 through 3
+    .color_#{$i}
+        @if $i == 1
+            color: green
+        @else if $i == 2
+            color: red
+        @else 
+            color: yellow
+
+@function border($t_size)
+    @return $t_size * 2 - 10px
+.main
+    padding: $size $size/3
+    background-color: #008080
+.table
+    margin-left: $size * 10
+.table__background 
+    font-size: $size / 2
+    background-color: red
+    border: border(6) solid yellow
+th 
+    border: border(7) solid purple
+
+.name__form
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-size: $size / 2
+    text-align: center
+    color:firebrick
+.btn
+    font-size: $size / 2
+
+form
+    text-align: center
+    font-size: $size / 2
+    color:firebrick

@@ -1,0 +1,45 @@
+.margin_left {
+  margin-left: 500px;
+}
+main {
+  background-color: #f0d71c;
+  padding: 100px 0;
+}
+.table {
+  width: calc(100px * 2.5);
+  margin-left: 500px;
+}
+.table__background {
+  border: 4px solid green;
+  color: white;
+}
+th {
+  border: 4px solid green;
+}
+.Form__for__table {
+  font-size: 100px / 4;
+  margin-left: 500px;
+  text-transform: uppercase;
+}
+.btn {
+  font-size: 100px / 4.5;
+  border-radius: 100px / 10;
+  padding: 10px 100px / 2;
+  background-color: #abff1c;
+}
+@media (max-width:950px) {
+  .table {
+    text-align: center;
+    margin-left: 200px;
+  }
+  .table__background {
+    border: 3px solid green;
+  }
+  .Form__for__table {
+    font-size: 100px / 5;
+    margin-left: 200px;
+  }
+  .btn {
+    padding: 8px 100px / 4;
+  }
+}

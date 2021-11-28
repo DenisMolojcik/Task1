@@ -1,0 +1,48 @@
+$bgcolor: yellow
+$none: none
+$size: 50px
+$font: Boby
+$color:#800000
+
+@mixin disp_and_pos
+    display: flex
+    position: relative
+    
+@mixin header_and_footer
+    background-color: $bgcolor
+    text-decoration: $none
+    font-size: $size / 2
+    padding: $size / 2
+    color: #800000
+.header 
+    @include header_and_footer
+
+.header__name
+    font-family: $font
+    padding: $size * 2
+    font-size: $size
+
+.header__body
+    @include disp_and_pos
+    align-items: center
+
+.header__link li
+    list-style: $none
+
+.header__link
+    color: $color
+    text-transform: uppercase
+    font-size: $size / 2
+    text-decoration: $none
+    margin-right: $size
+
+.header__list
+    @include disp_and_pos
+
+.header__list li
+    list-style: $none
+
+.footer
+    @include header_and_footer
+    text-align: center
+    

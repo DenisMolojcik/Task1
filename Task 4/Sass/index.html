@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- add Open Graph(og) protocol -->
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Task 4</title>
+    <!-- Meta Tags -->
+    <link rel="stylesheet" href="css/Sass/dist/style.css">
+    <link rel="stylesheet" href="css/Sass/dist/Homestyle.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="fcbarcelonastore">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="https://og-image.xyz/og/title/subtitle/og-image.xyz/https/menlo/candybar/black/data.png">
+</head>
+<!-- Add microdata tags on HTML-document -->
+<!-- Adding to RDFa tags -->
+<body vocab="https://schema.org/" prefix="foaf: http://xmlns.com/foaf/0.1/">
+   <!-- Header -->
+   <header class="header" property="title" href="#header" typeof="head">
+    <div class="container">
+        <div class="header__body" resource="#header">
+            <!-- Logo of site -->
+            <a property="logo" href="#" class="header__logo">
+                <img rel="foaf:depiction"  src="images/m_logo.png" alt="">
+            </a>
+            <!-- Name of the site -->
+            <span class="header__name" property="name" >FC BARCELONA STORE</span>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <!-- Menu of the site -->
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li>
+                        <a property="url" href="index.html" class="header__link">Home</a>
+                    </li>
+                    <li>
+                        <a property="url" href="Table.html" class="header__link">Table</a>
+                    </li>
+                    <li>
+                        <a property="url" href="About.html" class="header__link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+    <main>
+        <!-- Info -->
+        <section class="info">
+        <div class="hover-text">
+            <!-- Heading of the site -->
+            <p class="hover-head" property="title" href="#info" typeof="info">Lorem ipsum</p>
+            <!-- Adding CSS effect -->
+            <figure class="effect-text">
+                <!-- Image -->
+                <img src="images/team.jpeg" alt="" class="team__background">
+                <figcaption resource="#info" typeof="about">
+                    <h3 property="head">Lorem <span>ipsum</span></h3>
+                    <p property="info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </figcaption>	
+            </figure>      	
+        </div>
+    </section>
+    <!-- Pricing -->
+    <section class="container__pricing"  vocab="http://purl.org/dc/terms/">
+        <h2 class="pricing_title" property="title" href="#container__pricing">PRICING</h2>
+        <div class="pricing_content" resource="#container__pricing">
+            <!-- Block with the sale of the kit -->
+            <div class="pricing_kit_1">
+                <p class="name_kit">FC Barcelona Home Shirt 21/22</p>
+                <div><img src="images/home.jpg" class="img_kit" alt=""></div>
+                <p class="price">lorem ipsum</p>
+                <a href="#" class="button_1">BUY</a>
+            </div>
+            <!-- Block with the sale of the kit -->
+            <div class="pricing_kit_2">
+                <p class="name_kit">FC Barcelona Away Shirt 21/22</p>
+                <div><img src="images/away.jpg" alt="" class="img_kit"></div>
+                <p class="price">lorem ipsum</p>
+                <a href="#" class="button_2">BUY</a>
+            </div>
+            <!-- Block with the sale of the kit -->
+            <div class="pricing_kit_3">
+                <p class="name_kit">FC Barcelona Third Shirt 21/22</p>
+                <div><img src="images/third.jpg" alt="" class="img_kit"></div>
+                <p class="price">lorem ipsum</p>
+                <a href="#" class="button_3">BUY</a>
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" property="title" href="#footer" typeof="end-site">
+		<div resource="#footer">
+          <div class="vevent" id="date"> 
+              <!-- display of the current date -->
+              <span class="summary" property="date">Today's date:</span> 
+              <abbr title="2021-10-17" class="dtstart"></abbr>
+          </div>
+          <!-- developer information -->
+          Made by <div class="fn" property="creator" > Molojcik Denis</div>
+          <!-- version of the site -->
+          <div class="version__site" property="license"> Version 1.4</div>  
+        </div>
+    </footer>
+    <!-- Add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+.bg {
+  background-color: #f0d71c;
+}
+.info {
+  background-color: #f0d71c;
+}
+.team__background {
+  width: 50%;
+  min-width: 50%;
+}
+.hover-text {
+  color: #1c35d6;
+  text-align: center;
+  padding: 50px / 2 0;
+}
+.hover-head {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.hover-text figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+.hover-text figure h3 {
+  font-weight: 200;
+}
+.hover-text figure h3 span {
+  font-weight: 800;
+}
+.container__pricing {
+  padding: 50px;
+  background-color: #13ffef;
+}
+.pricing_title {
+  text-align: center;
+  font-size: 40px;
+}
+.img_kit {
+  max-height: 200px;
+  max-width: 200px;
+  margin: 0 110px;
+}
+.pricing_content {
+  display: flex;
+  justify-content: space-between;
+}
+.pricing_kit {
+  padding: 50px / 2 10px;
+  margin: 0px 50px;
+  background-color: #1c35d6;
+  border-radius: 20px;
+}
+.pricing_content .price {
+  font-size: 40px;
+  font-family: "Gill Sans Extrabold, sans-serif";
+  color: white;
+  text-align: center;
+}
+.pricing_content p {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
+.button {
+  text-decoration: none;
+  background-color: #d0d0d0;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 100px;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: #d03958;
+  color: #fff;
+}

@@ -1,0 +1,49 @@
+.main{
+    background-color:#004d98;
+    padding: 20px 0;
+}
+/* ---- Table ---- */
+.table{
+    text-align: center;
+    margin-top: 100px;
+}
+.table__background {
+    font-size: 30px;
+    display: inline-block;
+    background-color: red;
+    border: 3px solid;
+    border-collapse: separate;
+    empty-cells: hide;
+ }
+ th {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    border: 3px solid purple;
+ }
+ /* ---- Form ---- */
+ label{
+     font-size: 30px;
+ }
+.name__form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color:firebrick
+}
+.btn{
+    font-size: 30px;
+}
+form{
+    text-align: center;
+    font-size: 24px;
+    color:firebrick
+}
+@media (max-width:700px){
+    .table__background{
+        font-size: 20px;
+    }
+}
+@media (max-width:500px){
+    .table__background, .name__form, form{
+        font-size: 10px;
+    }
+}

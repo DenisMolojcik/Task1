@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- add Open Graph(og) protocol -->
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Task 4</title>
+    <!-- Meta Tags -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="aboutauthor">
+    <meta property="og:url" content="About.html">
+    <meta property="og:image" content="https://og-image.xyz/og/title/subtitle/og-image.xyz/https/menlo/candybar/black/data.png">
+    <link rel="stylesheet/less" type="text/less" href="css/less/style.less">
+    <link rel="stylesheet/less" type="text/less" href="css/less/AboutStyle.less">
+    <link rel="stylesheet" href="css/less/style.css">
+    <link rel="stylesheet" href="css/less/AboutStyle.css">
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.0.0/less.min.js"></script>
+</head>
+<!-- Add microdata tags on HTML-document -->
+<!-- Adding to RDFa tags -->
+<body vocab="https://schema.org/" prefix="foaf: http://xmlns.com/foaf/0.1/">
+    <!-- Header -->
+    <header class="header" property="title" href="#header" typeof="head">
+        <div class="container">
+            <div class="header__body" resource="#header">
+                <!-- Logo of site -->
+                <a property="logo" href="#" class="header__logo">
+                    <img rel="foaf:depiction"  src="images/m_logo.png" alt="">
+                </a>
+                <!-- Name of the site -->
+                <span class="header__name" property="name" >FC BARCELONA STORE</span>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <!-- Menu of the site -->
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a property="url" href="index.html" class="header__link">Home</a>
+                        </li>
+                        <li>
+                            <a property="url" href="Table.html" class="header__link">Table</a>
+                        </li>
+                        <li>
+                            <a property="url" href="About.html" class="header__link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Information about the author -->
+    <main class="about__author" property="title" href="#about-author" typeof="info">
+        <div resource="#about-author">
+             <p class="author">
+                  About author
+              </p>
+              <!-- Name of the author -->
+              <p class="name__of__author" property="name-author">
+                  Molojcik Denis
+              </p>
+              <!-- Text with information about the author -->
+              <p class="information" property="info-about-author">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quis provident ex delectus fugiat harum animi ea odio non ducimus quia distinctio consectetur, debitis reiciendis molestiae unde eligendi iste facilis!
+              </p>
+              <p class="feedback">
+                  Feedback to author
+              </p>
+              <!-- feedback from the author -->
+              <div>
+                  <p><input type="text" name="text" id="name" required placeholder="Name"></p>
+                  <p><input type="email" id="email" required placeholder="Email"></p>
+                  <p><input type="number" id="number" minlength="8" required placeholder="Your number"></p>
+                  <p><button class="button">Submit</button></p>
+              </div>
+            </div>
+          </main>
+    <!-- Footer -->
+    <footer class="footer" property="title" href="#footer" typeof="end-site">
+		<div resource="#footer">
+          <div class="vevent" id="date"> 
+              <!-- display of the current date -->
+              <span class="summary" property="date">Today's date:</span> 
+              <abbr title="2021-10-17" class="dtstart"></abbr>
+          </div>
+          <!-- developer information -->
+          Made by <div class="fn" property="creator" > Molojcik Denis</div>
+          <!-- version of the site -->
+          <div class="version__site" property="license"> Version 1.4</div>  
+        </div>
+    </footer>
+    <!-- Add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

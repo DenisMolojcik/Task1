@@ -1,0 +1,100 @@
+// variables
+@width:50%;
+@font-size:40px;
+@text-transform: uppercase;
+@color:rgb(28, 53, 214);
+@size:50px;
+@text_align:center;
+@max_size_for_kit: 200px;
+@border-radius:20px;
+@font_weight: 200;
+// mixins with required elements
+.for_pricing_content(@size;@font_family;@font_color){
+    font-size: @size - 10px;
+    font-family: @font_family;
+    color:@font_color;
+}
+// parameterized mixin without parameters
+.bg{
+    background-color: rgb(240, 215, 28);
+}
+.info{
+    .bg;
+}
+.team__background{
+    width: @width;
+    min-width: @width;
+}
+
+.hover-text{
+    color:@color;
+    text-align: @text_align;
+    padding: @size / 2 0;
+}
+
+.hover-head{
+    text-transform: @text-transform;
+    font-size: @font-size;
+}
+
+.hover-text figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+}
+.hover-text figure h3 {
+	font-weight: @font_weight;
+}
+.hover-text figure h3 span {
+	font-weight: @font_weight * 4;
+}
+
+// Pricing
+.container__pricing{
+    padding: @size;
+    background-color:rgb(19, 255, 239);
+}
+
+.pricing_title{
+    text-align: @text_align;
+    font-size: @size - 10px;
+}
+.img_kit{
+    max-height: @max_size_for_kit;
+    max-width: @max_size_for_kit;
+    margin:0 110px;
+}
+
+.pricing_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing_kit{
+    padding: @size / 2 10px;
+    margin: 0px 50px;
+    background-color:@color;
+    border-radius:@border-radius;
+}
+.pricing_content .price{
+    .for_pricing_content(50px, "Gill Sans Extrabold, sans-serif",white);
+    text-align: center;
+}
+
+.pricing_content p{
+    .for_pricing_content(40px, sans-serif,white);
+}
+
+.button{
+    text-decoration: none;
+    background-color: #d0d0d0;
+    .for_pricing_content(30px, sans-serif,white);
+    margin-left: @size * 2;
+    padding: 10px @size;
+    border-radius:@border-radius;
+}
+.button:hover{
+    background-color:#d03958;
+    color: #fff;
+}

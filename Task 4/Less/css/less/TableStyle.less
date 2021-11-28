@@ -1,0 +1,60 @@
+// variables
+@size:100px;
+@color:#f0d71c;
+@align:center;
+@text-color:white;
+@min_width_table: ~"(max-width:950px)";
+// mixins with multiple parameters
+.border(@width; @style; @color) {
+    border: @width @style @color;
+ }
+//  parameterized mixins without parameters
+.margin_left{
+    margin-left: @size * 5;
+}
+
+main{
+    background-color:@color;
+    padding:@size 0;
+}
+.table{
+    width: calc(@size * 2.5);
+    .margin_left;
+}
+.table__background{
+    .border(4px; solid; green);
+    color:@text-color;
+}
+
+th{
+    .border(4px; solid; green);
+}
+
+.Form__for__table{
+    font-size: @size / 4;
+    margin-left: @size * 5;
+    text-transform: uppercase;
+}
+.btn{
+    font-size: @size / 4.5;
+    border-radius: @size / 10;
+    padding: 10px @size / 2;
+    background-color: #9f8e10 + #0caf0c;
+}
+// Escaping
+@media @min_width_table{
+    .table{
+        text-align: @align;
+        margin-left: @size * 2;
+    }
+    .table__background{
+        .border(3px, solid, green);
+    }
+    .Form__for__table{
+        font-size: @size / 5;
+        margin-left: @size * 2;
+    }
+    .btn{
+        padding: 8px @size / 4;
+    }
+}

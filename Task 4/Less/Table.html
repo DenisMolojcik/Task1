@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- add Open Graph(og) protocol -->
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Task 4</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="table">
+    <meta property="og:url" content="Table.html">
+    <meta property="og:image" content="https://og-image.xyz/og/title/subtitle/og-image.xyz/https/menlo/candybar/black/data.png">
+    <link rel="stylesheet/less" type="text/less" href="css/less/style.less">
+    <link rel="stylesheet/less" type="text/less" href="css/less/TableStyle.less">
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.0.0/less.min.js"></script>
+    <link rel="stylesheet" href="css/less/style.css">
+    <link rel="stylesheet" href="css/less/TableStyle.css">
+</head>
+<!-- Add microdata tags on HTML-document -->
+<!-- Adding to RDFa tags -->
+<body vocab="https://schema.org/" prefix="foaf: http://xmlns.com/foaf/0.1/">
+    <!-- Header -->
+    <header class="header" property="title" href="#header" typeof="head">
+     <div class="container">
+         <div class="header__body" resource="#header">
+             <!-- Logo of site -->
+             <a property="logo" href="#" class="header__logo">
+                 <img rel="foaf:depiction"  src="images/m_logo.png" alt="">
+             </a>
+             <!-- Name of the site -->
+             <span class="header__name" property="name" >FC BARCELONA STORE</span>
+             <div class="header__burger">
+                 <span></span>
+             </div>
+             <!-- Menu of the site -->
+             <nav class="header__menu">
+                 <ul class="header__list">
+                     <li>
+                         <a property="url" href="index.html" class="header__link">Home</a>
+                     </li>
+                     <li>
+                         <a property="url" href="Table.html" class="header__link">Table</a>
+                     </li>
+                     <li>
+                         <a property="url" href="About.html" class="header__link">About</a>
+                     </li>
+                 </ul>
+             </nav>
+         </div>
+     </div>
+     </header>
+    <main>
+        <!-- Table with departed players -->
+        <article class="table" property="title" href="#table" typeof="column">
+            <table class="table__background" resource="#table" id="table__background">
+                <!-- Table header -->
+                  <tr>
+                      <th property="name"> Name</th>
+                      <th property="transfer"> Transfer to</th>
+                      <th property="value"> Value</th>
+                      <th property="birthday"> Birtday</th>
+                      <th property="season"> Season</th>
+                  </tr>
+                  <tr>
+                      <th> Lorem ipsum</th>
+                      <th> Club name</th>
+                      <th> Price</th>
+                      <th> Age</th>
+                      <th> 21/22</th>
+                  </tr>
+                  <tr>
+                      <th> Lorem ipsum</th>
+                      <th> Club name</th>
+                      <th> Price</th>
+                      <th> Age</th>
+                      <th> 21/22</th>
+                  </tr>
+                  <tr>
+                      <th> Lorem ipsum</th>
+                      <th> Club name</th>
+                      <th> Price</th>
+                      <th> Age</th>
+                      <th> 21/22</th>
+                  </tr>
+                  <tr>
+                      <th> Lorem ipsum</th>
+                      <th> Club name</th>
+                      <th> Price</th>
+                      <th> Age</th>
+                      <th> 21/22</th>
+                  </tr>
+                   <tr>
+                      <th> Lorem ipsum</th>
+                      <th> Club name</th>
+                      <th> Price</th>
+                      <th> Age</th>
+                      <th> 21/22</th>
+                  </tr>
+              </table>
+          </article>
+        <!-- Form for table -->
+        <article class="Form__for__table" property="title" href="#table-form">
+            <p class="name__form" >Choose Table color</p>
+            <form id="form" resource="#table-form" typeof="color">
+                <!-- Radiobutton to select green -->
+                <p>
+                    <input type="radio" name="color" id="color1" value="green">
+                    <label for="green" property="green">Green</label>
+                </p>
+                <!-- Radiobutton to select red -->
+                <p>
+                    <input type="radio" name="color" id="color2" value="red" checked>
+                    <label for="red" property="red">Red</label>
+                </p>
+                <!-- Radiobutton to select yellow -->     
+                <p>
+                    <input type="radio" name="color" id="color3" value="yellow">
+                    <label for="yellow" property="yellow">Yellow</label>
+                </p>
+                <p><input type="button" class="btn" id="btn" value="Submit" onClick="onClick()"></p>
+            </form>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" property="title" href="#footer" typeof="end-site">
+		<div resource="#footer">
+          <div class="vevent" id="date"> 
+              <!-- display of the current date -->
+              <span class="summary" property="date">Today's date:</span> 
+              <abbr title="2021-10-17" class="dtstart"></abbr>
+          </div>
+          <!-- developer information -->
+          Made by <div class="fn" property="creator" > Molojcik Denis</div>
+          <!-- version of the site -->
+          <div class="version__site" property="license"> Version 1.4</div>  
+        </div>
+    </footer>
+    <!-- Add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Script for table and form -->
+    <script>
+        const button = document.getElementById('btn');
+        // getting a value from a form
+        let radio_color = document.getElementById('form').value;
+        let radio__background = document.getElementById('table__background');
+        function onClick(){
+            // if the color is green then the table will be green
+            if (document.getElementById('color1').checked) {
+                radio__background.style.backgroundColor = 'green';
+            }    
+            // if the color is red then the table will be red
+            else if(document.getElementById('color2').checked)
+            {
+                radio__background.style.backgroundColor = 'red';
+            }
+            // if the color is yellow then the table will be yellow
+            else if(document.getElementById('color3').checked)
+            {
+                radio__background.style.backgroundColor = 'yellow';
+            }
+        }  
+    </script>
+</body>
+</html>

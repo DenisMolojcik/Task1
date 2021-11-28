@@ -1,0 +1,81 @@
+@for $i from 1 through 3
+    .pricing_kit_#{$i}
+        margin: 10*$i 
+        border-radius: $i * 5px
+@each $number in 1, 2, 3
+  .pricing_kit_#{$number} 
+    @if $number == 1
+        background-color: #A9A9A9
+    @else if $number == 2
+        background-color: #FF00FF
+    @else 
+        background-color: #BC8F8F  
+
+$size: 50px
+$align: center
+$font: Rany
+
+$i: 3
+@while $i > 0
+  .button_#{$i}
+    @if $i == 3
+        background-color: #A9A9A9
+    @else if $i == 2
+        background-color: #BC8F8F 
+    @else 
+        background-color: #FF00FF
+    font-size: 20px
+    font-family: $font
+    color: rgb(22, 22, 22)
+    padding: 10px 30px
+    border-radius:6px
+    margin: 0 0 0 $size * 2.5
+    transition: all .4s ease
+    text-decoration: none
+  $i: $i - 1
+
+.hover-text
+    background-color: #e21f1f
+    padding: $size * 1.5
+.hover-head
+    font-size: $size
+    text-align: $align
+    text-transform: uppercase 
+.team__background
+    width: 50%
+    margin-left: $size * 6
+h3, p
+    text-align: $align
+    font-size: $size - 10px
+
+
+.container__pricing
+    background-color:#00FF00
+    padding: $size 0
+
+.pricing_title
+    text-align: $align
+    margin: $size 0
+
+.img_kit
+    max-height: 170px
+    max-width: 170px
+    margin:0px 0px 0px $size * 2.5
+.pricing_content
+    margin-left: $size
+    display: grid
+    grid-template-columns: repeat(auto-fill, 400px)
+    grid-gap: 80px
+
+.pricing_content .price
+    font-family: $font
+    color: #d81e44
+    font-size: $size
+    font-weight: bold
+    margin: 10px 30px
+
+.pricing_content p
+    font-size: 22px
+    font-family: $font
+    text-align: center
+    margin-bottom: 35px

@@ -1,0 +1,49 @@
+.container {
+  max-width: 1500px;
+}
+.position_and_display {
+  position: relative;
+  display: flex;
+}
+.header,
+.footer {
+  background-color: #143be9;
+  width: 100%;
+  color: #c32020;
+  font-size: 30px;
+  padding: 0px;
+  font-family: cursive;
+}
+.header__name {
+  margin-left: 100px;
+}
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  align-items: center;
+}
+.header__menu {
+  text-align: right;
+  padding: 0 100px;
+}
+.header__link {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #bd2626;
+  font-size: 30px;
+}
+.header__list {
+  position: relative;
+  display: flex;
+}
+.header__list li {
+  margin: 0 20px;
+  list-style: none;
+}
+.footer {
+  text-align: center;
+  padding: 50px 0;
+}
