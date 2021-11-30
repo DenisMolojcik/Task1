@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <p class="num">
+            <p class="priority">Select priority</p>
+            <input type="radio" name="number" id="float" value="float">
+            <label for="float">Float</label>
+            <p>
+                <input type="radio" name="number" id="int" value="int">
+                <label for="integer">Integer</label>
+            </p>
+            <button class="button" id="priority" onclick="priority()">Select</button>
+        </p>
+        <div class="form_for_input">
+            <form name="form">
+                <input type="text" name="inputforcalc" class="input" size="20" readonly>
+            </form>
+        </div>
+        <div class="button">
+            <p class="for_txt" id="txt"></p>
+            <p>
+                <input type="button" value="1" onclick="insert('1')" class="btn_for_number" id="btn_for_one">
+                <input type="button" value="2" onclick="insert('2')"class="btn_for_number" id="btn_for_number">
+                <input type="button" value="3" onclick="insert('3')"class="btn_for_number">
+                <input type="button" value="+" onclick="insert('+')"class="btn_for_operation">
+            </p>
+            <p>
+                <input type="button" value="4" onclick="insert('4')" class="btn_for_number">
+                <input type="button" value="5" onclick="insert('5')"class="btn_for_number">
+                <input type="button" value="6" onclick="insert('6')"class="btn_for_number">
+                <input type="button" value="-" onclick="insert('-')"class="btn_for_operation">
+            </p>
+            <p>
+                <input type="button" value="7" onclick="insert('7')" class="btn_for_number">
+                <input type="button" value="8" onclick="insert('8')" class="btn_for_number">
+                <input type="button" value="9" onclick="insert('9')" class="btn_for_number">
+                <input type="button" value="*" onclick="insert('*')" class="btn_for_operation">
+            </p>
+            <p>
+                <input type="button" value="C" onclick="clearField()" class="btn_for_operation">
+                <input type="button" value="0" onclick="insert('0')" class="btn_for_number">
+                <input type="button" value="<-" onclick="back()" class="btn_for_operation">
+                <input type="button" value="/" onclick="insert('/')" class="btn_for_operation">
+            </p>
+            <p>
+                <div class="history">
+                    <button value="History" class="History" onclick="windowForHistory()">History</button>
+                    <button id="point" onclick="insert('.')">.</button>
+                 </div>
+            </p>
+            <p>
+                <input type="button" value="=" onclick="calc_of_values()" class="btn_for_equals">
+            </p>
+        </div>
+    </div>
+    <script>
+        function priority(){
+            if(document.getElementById('int').checked)
+                document.getElementById('point').hidden = true;
+            else
+                document.getElementById('point').hidden = false;
+        }
+        let historyOfcalculation = [];
+        function insert(n){
+            document.form.inputforcalc.value = document.form.inputforcalc.value + n;
+        }
+        function back(){
+            var back = document.form.inputforcalc.value;
+            document.form.inputforcalc.value = back.substring(0, back.length-1);
+        }
+        function clearField(){
+            document.form.inputforcalc.value = '';
+        }
+        function calc_of_values(){
+            var value = document.form.inputforcalc.value;
+            historyOfcalculation.push(value);
+            console.log(historyOfcalculation);
+            if(value){
+                if(document.getElementById('int').checked)
+                    document.form.inputforcalc.value = Math.round(eval(value));
+                else
+                    document.form.inputforcalc.value = eval(value);;
+            }
+        }
+        function windowForHistory(){
+            var Window = window.open("about:blank", "History", "width=500,height=500");
+
+            Window.document.write("History" + '<br>' + historyOfcalculation);
+        }
+        
+    </script>
+</body>
+</html>

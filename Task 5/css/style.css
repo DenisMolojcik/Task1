@@ -1,0 +1,31 @@
+body{
+    background-color: 	#7FFFD4;
+    margin: 100px 600px;
+}
+.priority{
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+}
+button{
+    padding: 15px 30px;
+    border-radius:14px;
+    background:greenyellow;
+}
+input{
+    border-radius: 20px;
+    padding: 15px;
+    color:red;
+    font-size: 20px;
+}
+.btn_for_number{
+    background: gray;
+}
+.btn_for_operation{
+    background:#000;
+}
+.btn_for_equals{
+    background:green;
+    padding: 15px 80px;
+}
