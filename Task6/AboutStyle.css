@@ -1,0 +1,192 @@
+a{
+    text-decoration: none;
+}
+/* ----- Header -----*/
+.container{
+    max-width: 1500px;
+}
+.header{
+    position: fixed;
+    padding: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header:before{
+    content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #000;
+}
+.header__name{
+    color: #fff;
+    margin-right: 100px;
+    font-size: 40px;
+    font-family: 'Spectral', serif;
+}
+.header__body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-align: center;
+}
+/* For Form */
+main{
+    display: grid;
+    grid-template-columns: repeat(2,50%);   
+    background-color:aqua;
+    padding: 200px;
+    border: 1px solid rebeccapurple;
+}
+.pizza{
+    margin: 10px;
+}
+.pizza p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.price, .calories{  
+    font-size: 10px;
+}
+.constructor{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.dough div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.cheese div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.meat div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.seafood div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.vegetables div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.sauce div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.dough{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 150px 150px 150px;
+    
+}
+.dough div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    margin: 10px;
+}
+/* Ингредиенты */
+.cheese{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 150px 150px;
+}
+.meat{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 150px 150px;
+}
+.seafood{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 150px 150px;
+}
+.vegetables{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 150px 150px;
+}
+.cheese div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.meat div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.seafood div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.vegetables div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+/* Соусы */
+.sauce{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 150px 150px 150px;
+}
+.sauce div{
+    background-color:	#FFE4B5;
+    padding: 30px;
+    border-radius:6px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+/* заказ */
+.order_pizza{
+    margin-left: 200px;
+    margin-top: 200px;
+    font-size: 25px;
+}
+.border{
+    border: 2px solid #000;
+}
+.selected_ingredients{
+    padding: 50px;
+    background-color:antiquewhite;
+    margin: 10px;
+}
+/* ----- Footer ----- */
+.footer{
+    background-color:#000;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    width:100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
