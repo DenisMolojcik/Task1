@@ -1,0 +1,12 @@
+body{
+    background-color:aqua;
+}
+.trash{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 60px;
+}
+.bucket{
+    position: relative;
+}

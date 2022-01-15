@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script> 
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <style type="text/css">
+        .trash {padding: 10px;width: 100px; margin: 4px;}
+        #droppable {padding: 200px; position: absolute; right: 5px;}
+    </style>
+    <script>
+        function make_trash(number){
+                const place = document.querySelector('.trash_place');
+                for (let i = 0; i < number; i++) {
+                    const img = document.createElement('img');
+                    img.classList.add('trash');
+                    img.src = "./img/trash.png";
+                    img.style.top = `${Math.random()*100}px`;
+                    img.style.left = `${100 + Math.floor(Math.random()*50)}px`;
+                    place.append(img)
+                }
+            }
+        $(function() {
+            make_trash(5);
+            $('.trash').draggable();
+            $('#droppable').droppable({
+                drop: function() {
+                    $('#droppable').html('<img src="img/close.png" alt="">');
+                    $('.trash:first').remove();
+                    
+                },
+                over:function(){
+                    $('#droppable').html('<img src="img/open.png" alt="">');
+                },
+                out:function(){
+                    $('#droppable').html('<img src="img/close.png" alt="">');    
+                }
+            });    
+        });
+    </script>
+</head>
+<body>
+    <div id="droppable">
+        <img src="img/close.png" alt="">
+    </div> 
+    <div class="trash_place"></div>
+</body>
+</html>
